@@ -6,7 +6,9 @@
   <body>
     <h2>TEXT</h2>
     <p><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    <p><i><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></p>
+        <blockquote cite="http://">
+          <p><i><b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</i></p>
+        </blockquote>
     <p><b>Lorem</b>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     <h2>TABLE</h2>
@@ -22,18 +24,14 @@
         <tr>
           <td></td>
           <td></td>
-          <th>Scores by Quarter</th>
-          <td></td>
-          <td></td>
-          <td></td>
+          <th rowspan="6">Scores by Quarter</th>
       </tr>
       </thead>
       <tbody>
         <tr>
           <td></td>
-          <td>First Half</td>
-          <td></td>
-          <td>Second Half</td>
+          <td colspan="2">First Half</td>
+          <td colspan="2">Second Half</td>
           <td></td>
           <td></td>
         </tr>
@@ -69,26 +67,93 @@
           <td>0</td>
           <td>3</td>
         </tr>
-        <tr>
+        <tfoot>
           <td>Total</td>
           <td>0</td>
           <td>7</td>
           <td>17</td>
           <td>0</td>
           <td>24</td>
-        </tr>
+        </tfoot>
       </tbody>
     </table>
     <br>
     <h2>LIST</h2>
     <ul>
-      <li>html link here</li>
+      <img src="https://i.pinimg.com/originals/66/a9/10/66a910aba3f742a5f575e59cd1abbba7.png" alt="">
+      <li><a href="https://www.denverbroncos.com/">Broncos</a></li>
       <ul>
-        <li>position</li>
+        <li>Coach: Nic Fangio</li>
+        <li>QB:</li>
+        <ol>
+          <li>Teddy Bridgewater</li>
+          <li>Drew Lock</li>
+          <li>Brett Rypien</li>
+        </ol>
       </ul>
-        <ul>
-          <li>player name</li>
-        </ul>
+      <img src="http://assets.stickpng.com/thumbs/580b585b2edbce24c47b2b41.png" alt="">
+      <li><a href="https://www.giants.com/">NY Giants</a></li>
+      <ul>
+        <li>Coach: Joe Judge</li>
+        <li>QB:</li>
+        <ol>
+          <li>Daniel Jones</li>
+          <li>Mike Glennon</li>
+          <li>Clayton Thorson</li>
+        </ol>
+      </ul>
     </ul>
+    <h2>FORM</h2>
+    <!--
+    Frist   Last
+    Favorite Sport Dropdown
+    I have: check boxes for attended played coached bet on "this sport"
+    For this sport, I prefer: radio buttons for Amateur College Professional
+    Submit button-->
+    <form class="" action="submission.html" method="post">
+      <section class="fname" class="lname">
+          <label for="fname">First:</label>
+    			<input type="text" name="fname" id="fname">
+          <!-- <section class="lname"> -->
+          <label for="lname">Last:</label>
+    			<input type="text" name="lname" id="lname">
+        </section>
+        <br>
+        <section class="fave-sport">
+          <label for="fave">Favorite sport?</label>
+          <select name="fave" id="fave">
+            <option value="football">Football</option>
+            <option value="soccer">Soccer</option>
+            <option value="rugby">Rugby</option>
+            <option value="volleyball">Volleyball</option>
+          </select>
+        </section>
+        <br>
+        <section class="ihave">
+          <span>I have:
+          <input type="checkbox" name="ihave" id="attended" value="attended">
+          <label for="attended">Attended</label>
+          <input type="checkbox" name="ihave" id="coached" value="coached">
+          <label for="coached">Coached</label>
+          <input type="checkbox" name="ihave" id="bet-on" value="bet-on">
+          <label for="bet-on">Bet on</label>
+          <br>
+          this sport.</span>
+        </section>
+        <br>
+        <section class="prefer">
+          <span>For this sport, I prefer: </span>
+          <input type="radio" name="pref" id="amateur" value="amateur">
+          <label for="amateur">Amateur</label>
+          <input type="radio" name="pref" id="college" value="college">
+          <label for="college">College</label>
+          <input type="radio" name="pref" id="professional" value="professional">
+          <label for="professional">Professional</label>
+        </section>
+        <br>
+        <section class="submission">
+          <input type="submit" value="Submit">
+        </section>
+    </form>
   </body>
 </html>
